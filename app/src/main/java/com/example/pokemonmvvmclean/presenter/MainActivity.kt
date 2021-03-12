@@ -1,7 +1,8 @@
-package com.example.pokemonmvvmclean
+package com.example.pokemonmvvmclean.presenter
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.pokemonmvvmclean.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
