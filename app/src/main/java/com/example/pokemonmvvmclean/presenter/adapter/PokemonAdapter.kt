@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.pokemonmvvmclean.R
 import com.example.pokemonmvvmclean.presenter.model.PokemonUiModel
 
@@ -19,7 +20,7 @@ class PokemonAdapter(
     }
 
     override fun onBindViewHolder(holder: PokemonViewHolder, position: Int) {
-
+        Glide.with(holder.itemView.context).load(pokemonList[position].img).into(holder.imgPokemon)
         holder.namePokemon.text = pokemonList[position].name
     }
 
