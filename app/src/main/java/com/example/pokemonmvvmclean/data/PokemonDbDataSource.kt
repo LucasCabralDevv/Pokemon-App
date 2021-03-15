@@ -18,7 +18,6 @@ class PokemonDbDataSource : PokemonRepository {
         val remote = RetrofitClient.createService(PokemonService::class.java)
         val call: Call<PokemonResponse> = remote.getListPokemon()
 
-
         call.enqueue(object : Callback<PokemonResponse>{
             override fun onResponse(call: Call<PokemonResponse>,response: Response<PokemonResponse>) {
                 val str = ""

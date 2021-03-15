@@ -29,11 +29,10 @@ class PokemonFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        rv_pokemon.layoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL, false)
-
         viewModel.pokemons.observe(viewLifecycleOwner) { pokemonList ->
             with(rv_pokemon) {
                 setHasFixedSize(true)
+                layoutManager = GridLayoutManager(context, 2)
                 adapter = PokemonAdapter(pokemonList)
             }
         }
