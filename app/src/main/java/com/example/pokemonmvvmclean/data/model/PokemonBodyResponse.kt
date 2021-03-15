@@ -1,5 +1,7 @@
 package com.example.pokemonmvvmclean.data.model
 
+import com.example.pokemonmvvmclean.domain.model.Pokemon
+
 data class PokemonBodyResponse(
     val id: Int?,
     val num: String?,
@@ -9,4 +11,11 @@ data class PokemonBodyResponse(
     val height: String?,
     val weight: String?,
     val weaknesses: List<String>?
-)
+) {
+    fun getPokemonModel() = Pokemon (
+        name = this.name,
+        img = this.img,
+        height = this.height,
+        weight = this.weight
+        )
+}
