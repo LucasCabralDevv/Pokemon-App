@@ -4,7 +4,7 @@ import com.example.pokemonmvvmclean.domain.model.Pokemon
 
 interface PokemonRepository {
 
-    fun getPokemons(pokemonResultCallback: (result: PokemonResult) -> Unit)
+    suspend fun getPokemons(pokemonResultCallback: (result: PokemonResult) -> Unit)
 
     sealed class PokemonResult {
         class Success(val pokemons: List<Pokemon>) : PokemonResult()

@@ -11,7 +11,7 @@ import retrofit2.Response
 
 class PokemonDbDataSource : PokemonRepository {
 
-    override fun getPokemons(pokemonResultCallback: (result: PokemonRepository.PokemonResult) -> Unit) {
+    override suspend fun getPokemons(pokemonResultCallback: (result: PokemonRepository.PokemonResult) -> Unit) {
 
         val remote = RetrofitClient.createService(PokemonService::class.java)
         val call: Call<PokemonResponse> = remote.getListPokemon()
