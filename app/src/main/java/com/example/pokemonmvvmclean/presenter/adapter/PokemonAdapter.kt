@@ -8,10 +8,11 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.pokemonmvvmclean.R
+import com.example.pokemonmvvmclean.data.model.PokemonBodyResponse
 import com.example.pokemonmvvmclean.presenter.model.PokemonUiModel
 
 class PokemonAdapter(
-    private val pokemonList : List<PokemonUiModel>
+    private val pokemonList : List<PokemonBodyResponse>
 ) : RecyclerView.Adapter<PokemonAdapter.PokemonViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PokemonViewHolder {

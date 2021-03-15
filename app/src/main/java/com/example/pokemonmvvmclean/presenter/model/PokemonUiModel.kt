@@ -6,3 +6,9 @@ data class PokemonUiModel (
     val name: String?,
     val img: String?
 )
+
+fun Pokemon.toUiModel() = PokemonUiModel(
+    name = this.name,
+    img = this.img
+)
+

@@ -10,12 +10,12 @@ data class PokemonBodyResponse(
     val type: List<String>?,
     val height: String?,
     val weight: String?,
-    val weaknesses: List<String>?
-) {
-    fun getPokemonModel() = Pokemon (
-        name = this.name,
-        img = this.img,
-        height = this.height,
-        weight = this.weight
-        )
-}
+    val weaknesses: List<String>?,
+    val next_evolution: List<Evolution>?,
+    val prev_evolution: List<Evolution>?
+)
+
+fun PokemonBodyResponse.toPokemonModel() = Pokemon(
+    name = this.name,
+    img = this.img
+)

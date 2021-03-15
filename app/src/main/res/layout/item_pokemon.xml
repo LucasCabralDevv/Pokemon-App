@@ -36,6 +36,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="16dp"
+                android:textColor="@color/black"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 tools:text="Pikachu" />
