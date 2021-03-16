@@ -6,13 +6,13 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import coil.load
 import com.bumptech.glide.Glide
 import com.example.pokemonmvvmclean.R
-import com.example.pokemonmvvmclean.data.model.PokemonBodyResponse
 import com.example.pokemonmvvmclean.presenter.model.PokemonUiModel
 
 class PokemonAdapter(
-    private val pokemonList : List<PokemonBodyResponse>
+    private val pokemonList : List<PokemonUiModel>
 ) : RecyclerView.Adapter<PokemonAdapter.PokemonViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PokemonViewHolder {
@@ -21,8 +21,13 @@ class PokemonAdapter(
     }
 
     override fun onBindViewHolder(holder: PokemonViewHolder, position: Int) {
-        Glide.with(holder.itemView.context).load(pokemonList[position].img).into(holder.imgPokemon)
-        holder.namePokemon.text = pokemonList[position].name
+        val pokemon = pokemonList[position]
+        with(holder) {
+            imgPokemon.load(pokemon.img)
+            namePokemon.text = pokemon.name
+        }
+        //Glide.with(holder.itemView.context).load(pokemonList[position].img).into(holder.imgPokemon)
+        //holder.namePokemon.text = pokemonList[position].name
     }
 
     override fun getItemCount() = pokemonList.count()

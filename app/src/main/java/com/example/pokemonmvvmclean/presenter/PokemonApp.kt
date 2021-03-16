@@ -1,7 +1,7 @@
 package com.example.pokemonmvvmclean.presenter
 
 import android.app.Application
-import com.example.pokemonmvvmclean.presenter.di.pokemonModule
+import com.example.pokemonmvvmclean.presenter.di.pokemonServiceModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
@@ -13,7 +13,7 @@ class PokemonApp : Application() {
         startKoin {
             androidLogger()
             androidContext(this@PokemonApp)
-            modules(pokemonModule)
+            modules(pokemonServiceModule)
         }
     }
 }

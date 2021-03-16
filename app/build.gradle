@@ -55,12 +55,14 @@ dependencies {
 
     //Dependência Retrofit
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
-    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-moshi:2.9.0'
     // Dependência Logger retrofit
     implementation 'com.squareup.okhttp3:logging-interceptor:4.2.1'
 
     //Dependência Glide
     implementation 'com.github.bumptech.glide:glide:4.9.0'
+
+    implementation("io.coil-kt:coil:1.1.1")
 
     //Dependência Koin
     def koin_version = '2.2.2'
