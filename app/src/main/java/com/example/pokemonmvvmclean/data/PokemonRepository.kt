@@ -19,19 +19,16 @@ class PokemonRepositoryImpl(
             is Output.Success -> {
                 val pokemonResponseList = result.value.pokemon
 
-                pokemonResponseList.map {
-                    it.toPokemonModel()
+                pokemonResponseList.map { PokemonResponseModel ->
+                    PokemonResponseModel.toPokemonModel()
                 }
             }
             is Output.Failure -> throw GetPokemonsException()
         }
     }
-
-
 }
 
 interface PokemonRepository {
-
     suspend fun getPokemons(): List<Pokemon>
 }
 

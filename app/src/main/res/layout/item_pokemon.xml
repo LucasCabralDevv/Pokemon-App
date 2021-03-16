@@ -11,7 +11,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:cardCornerRadius="4dp"
-        android:elevation="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,12 +23,13 @@
             android:orientation="vertical"
             android:padding="16dp">
 
-            <ImageView
+            <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/pokemonImage"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
+                android:contentDescription="@string/pokemon_image_content_description"
                 android:scaleType="fitXY"
-                tools:src="@tools:sample/avatars"/>
+                tools:src="@tools:sample/avatars" />
 
             <TextView
                 android:id="@+id/pokemonName"

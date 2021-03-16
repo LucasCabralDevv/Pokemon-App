@@ -13,7 +13,6 @@ class GetPokemons(
     } catch (ex: Exception) {
         listOf()
     }
-
 }
 
 interface GetPokemonsUseCase {

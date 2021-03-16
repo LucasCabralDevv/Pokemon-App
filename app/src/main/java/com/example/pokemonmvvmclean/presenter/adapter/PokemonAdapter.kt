@@ -7,8 +7,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
-import com.bumptech.glide.Glide
 import com.example.pokemonmvvmclean.R
+import com.example.pokemonmvvmclean.databinding.ItemPokemonBinding
 import com.example.pokemonmvvmclean.presenter.model.PokemonUiModel
 
 class PokemonAdapter(
@@ -16,15 +16,15 @@ class PokemonAdapter(
 ) : RecyclerView.Adapter<PokemonAdapter.PokemonViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PokemonViewHolder {
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.item_pokemon, parent, false)
+        val itemView = ItemPokemonBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return PokemonViewHolder(itemView)
     }
 
     override fun onBindViewHolder(holder: PokemonViewHolder, position: Int) {
         val pokemon = pokemonList[position]
         with(holder) {
-            imgPokemon.load(pokemon.img)
-            namePokemon.text = pokemon.name
+            binding.pokemonImage.load(pokemon.img)
+            binding.pokemonName.text = pokemon.name
         }
         //Glide.with(holder.itemView.context).load(pokemonList[position].img).into(holder.imgPokemon)
         //holder.namePokemon.text = pokemonList[position].name
@@ -32,9 +32,6 @@ class PokemonAdapter(
 
     override fun getItemCount() = pokemonList.count()
 
-    inner class PokemonViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-
-        internal val imgPokemon: ImageView = itemView.findViewById(R.id.pokemonImage)
-        internal val namePokemon: TextView = itemView.findViewById(R.id.pokemonName)
-    }
+    inner class PokemonViewHolder(val binding: ItemPokemonBinding) :
+        RecyclerView.ViewHolder(binding.root)
 }

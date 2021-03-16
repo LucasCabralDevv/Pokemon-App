@@ -31,6 +31,9 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    viewBinding {
+        enabled = true
+    }
 }
 
 dependencies {
@@ -61,7 +64,7 @@ dependencies {
 
     //Dependência Glide
     implementation 'com.github.bumptech.glide:glide:4.9.0'
-
+    //Dependência Coil
     implementation("io.coil-kt:coil:1.1.1")
 
     //Dependência Koin

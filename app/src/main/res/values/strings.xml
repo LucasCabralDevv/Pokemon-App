@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Pokemon MVVM Clean</string>
+    <string name="pokemon_image_content_description">Pokemon Image</string>
 </resources>
