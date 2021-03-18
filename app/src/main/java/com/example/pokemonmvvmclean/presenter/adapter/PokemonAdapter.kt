@@ -1,5 +1,6 @@
 package com.example.pokemonmvvmclean.presenter.adapter
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -7,6 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
+import com.bumptech.glide.Glide
 import com.example.pokemonmvvmclean.R
 import com.example.pokemonmvvmclean.databinding.ItemPokemonBinding
 import com.example.pokemonmvvmclean.presenter.model.PokemonUiModel
@@ -23,11 +25,11 @@ class PokemonAdapter(
     override fun onBindViewHolder(holder: PokemonViewHolder, position: Int) {
         val pokemon = pokemonList[position]
         with(holder) {
-            binding.pokemonImage.load(pokemon.img)
+            //Glide.with(binding.pokemonImage.context).load(pokemon.img).into(binding.pokemonImage)
             binding.pokemonName.text = pokemon.name
+            binding.pokemonImage.load(pokemon.img)
         }
         //Glide.with(holder.itemView.context).load(pokemonList[position].img).into(holder.imgPokemon)
-        //holder.namePokemon.text = pokemonList[position].name
     }
 
     override fun getItemCount() = pokemonList.count()

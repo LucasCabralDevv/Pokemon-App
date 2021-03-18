@@ -39,7 +39,7 @@ class PokemonFragment : Fragment() {
     private fun setupRecyclerView(pokemons: List<PokemonUiModel>) {
         with(binding.rvPokemon) {
             setHasFixedSize(true)
-            layoutManager = GridLayoutManager(requireContext(), 2)
+            layoutManager = GridLayoutManager(context, 2)
             adapter = PokemonAdapter(pokemons)
         }
     }
