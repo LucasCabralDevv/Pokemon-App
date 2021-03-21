@@ -1,6 +1,5 @@
 package com.example.pokemonmvvmclean.presenter.adapter
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -29,7 +28,6 @@ class PokemonAdapter(
             binding.pokemonName.text = pokemon.name
             binding.pokemonImage.load(pokemon.img)
         }
-        //Glide.with(holder.itemView.context).load(pokemonList[position].img).into(holder.imgPokemon)
     }
 
     override fun getItemCount() = pokemonList.count()

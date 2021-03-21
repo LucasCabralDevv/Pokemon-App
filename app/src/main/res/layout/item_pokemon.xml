@@ -23,7 +23,7 @@
             android:orientation="vertical"
             android:padding="16dp">
 
-            <androidx.appcompat.widget.AppCompatImageView
+            <ImageView
                 android:id="@+id/pokemonImage"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
