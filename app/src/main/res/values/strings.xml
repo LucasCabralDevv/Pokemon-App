@@ -1,4 +1,12 @@
 <resources>
     <string name="app_name">Pokemon MVVM Clean</string>
     <string name="pokemon_image_content_description">Pokemon Image</string>
+
+    <!-- Pokemons Fragment -->
+    <string name="pokemon_title_action_bar">Pokemons</string>
+
+    <!-- Pokemon Details Fragment -->
+    <string name="pokemon_details_title_action_bar">Pokemon Details</string>
+    <string name="pokemon_details_title">Pokemon Details</string>
+
 </resources>

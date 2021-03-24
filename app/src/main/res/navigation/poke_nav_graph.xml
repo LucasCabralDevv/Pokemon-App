@@ -7,7 +7,16 @@
 
     <fragment
         android:id="@+id/pokemonFragment"
-        android:name="com.example.pokemonmvvmclean.presenter.PokemonFragment"
-        android:label="pokemon_fragment"
-        tools:layout="@layout/pokemon_fragment" />
+        android:name="com.example.pokemonmvvmclean.presenter.pokemons.PokemonFragment"
+        android:label="@string/pokemon_title_action_bar"
+        tools:layout="@layout/pokemon_fragment" >
+        <action
+            android:id="@+id/action_pokemonFragment_to_detailsPokemonFragment"
+            app:destination="@id/detailsPokemonFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsPokemonFragment"
+        android:name="com.example.pokemonmvvmclean.presenter.pokemons.details.DetailsPokemonFragment"
+        android:label="@string/pokemon_details_title_action_bar"
+        tools:layout="@layout/fragment_details_pokemon" />
 </navigation>

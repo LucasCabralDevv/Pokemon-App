@@ -3,8 +3,8 @@ package com.example.pokemonmvvmclean.presenter
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.example.pokemonmvvmclean.domain.GetPokemonsUseCase
 import com.example.pokemonmvvmclean.domain.model.PokemonFactory
+import com.example.pokemonmvvmclean.presenter.pokemons.PokemonViewModel
 import io.mockk.coEvery
-import io.mockk.coVerify
 import io.mockk.mockk
 import kotlinx.coroutines.runBlocking
 import org.junit.Assert

@@ -13,7 +13,8 @@ import com.example.pokemonmvvmclean.databinding.ItemPokemonBinding
 import com.example.pokemonmvvmclean.presenter.model.PokemonUiModel
 
 class PokemonAdapter(
-    private val pokemonList : List<PokemonUiModel>
+    private val pokemonList : List<PokemonUiModel>,
+    private val onItemClickListener: ((pokemon: PokemonUiModel) -> Unit)
 ) : RecyclerView.Adapter<PokemonAdapter.PokemonViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PokemonViewHolder {
@@ -24,14 +25,18 @@ class PokemonAdapter(
     override fun onBindViewHolder(holder: PokemonViewHolder, position: Int) {
         val pokemon = pokemonList[position]
         with(holder) {
-            //Glide.with(binding.pokemonImage.context).load(pokemon.img).into(binding.pokemonImage)
             binding.pokemonName.text = pokemon.name
             binding.pokemonImage.load(pokemon.img)
+
+            itemView.setOnClickListener {
+                onItemClickListener.invoke(pokemon)
+            }
         }
     }
 
     override fun getItemCount() = pokemonList.count()
 
-    inner class PokemonViewHolder(val binding: ItemPokemonBinding) :
-        RecyclerView.ViewHolder(binding.root)
+    inner class PokemonViewHolder(
+        val binding: ItemPokemonBinding
+    ) : RecyclerView.ViewHolder(binding.root)
 }

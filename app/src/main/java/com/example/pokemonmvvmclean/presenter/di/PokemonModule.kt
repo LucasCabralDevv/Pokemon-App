@@ -6,7 +6,7 @@ import com.example.pokemonmvvmclean.data.api.PokemonService
 import com.example.pokemonmvvmclean.data.remote.Service
 import com.example.pokemonmvvmclean.domain.GetPokemons
 import com.example.pokemonmvvmclean.domain.GetPokemonsUseCase
-import com.example.pokemonmvvmclean.presenter.PokemonViewModel
+import com.example.pokemonmvvmclean.presenter.pokemons.PokemonViewModel
 import org.koin.dsl.module
 
 val pokemonServiceModule = module {

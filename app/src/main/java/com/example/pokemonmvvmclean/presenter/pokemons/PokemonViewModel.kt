@@ -1,4 +1,4 @@
-package com.example.pokemonmvvmclean.presenter
+package com.example.pokemonmvvmclean.presenter.pokemons
 
 import androidx.lifecycle.*
 import com.example.pokemonmvvmclean.domain.GetPokemonsUseCase
