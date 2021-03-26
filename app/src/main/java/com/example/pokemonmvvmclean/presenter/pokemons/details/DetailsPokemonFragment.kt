@@ -31,15 +31,19 @@ class DetailsPokemonFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        Glide.with(requireContext()).load(args.pokemon.img).into(detailsImagePokemonImageView)
-        detailsNamePokemonTextView.text = args.pokemon.name
-        detailsHeightPokemonTextView.text = args.pokemon.height
-        detailsWeightPokemonTextView.text = args.pokemon.weight
-        detailsWeaknessesPokemonTextView.text = args.pokemon.weaknesses.toString()
+        setupViews()
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         navController.popBackStack(R.id.pokemonFragment, false)
         return super.onOptionsItemSelected(item)
+    }
+
+    private fun setupViews() {
+        Glide.with(requireContext()).load(args.pokemon.img).into(detailsImagePokemonImageView)
+        detailsNamePokemonTextView.text = args.pokemon.name
+        detailsHeightPokemonTextView.text = args.pokemon.height
+        detailsWeightPokemonTextView.text = args.pokemon.weight
+        detailsWeaknessesPokemonTextView.text = args.pokemon.weaknesses.toString()
     }
 }
