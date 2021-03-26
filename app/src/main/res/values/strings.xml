@@ -8,5 +8,6 @@
     <!-- Pokemon Details Fragment -->
     <string name="pokemon_details_title_action_bar">Pokemon Details</string>
     <string name="pokemon_details_title">Pokemon Details</string>
+    <string name="details_capture_text">Try to capture your %1$s</string>
 
 </resources>
