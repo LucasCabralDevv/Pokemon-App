@@ -7,21 +7,29 @@
     android:layout_height="match_parent"
     tools:context=".presenter.pokemons.details.DetailsPokemonFragment">
 
-    <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/detailsHeaderImageView"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/detailsHeaderLayout"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:scaleType="centerInside"
-        app:layout_constraintBottom_toTopOf="@+id/content_layout"
+        app:layout_constraintBottom_toTopOf="@+id/detailsContentLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:lottie_autoPlay="true"
-        app:lottie_loop="true"
-        app:lottie_rawRes="@raw/pokedex" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/detailsHeaderImageView"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:scaleType="centerInside"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/avatars" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <LinearLayout
-        android:id="@+id/content_layout"
+        android:id="@+id/detailsContentLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -128,11 +136,11 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/pokeball_layout"
+        android:id="@+id/detailsPokeballLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="@+id/detailsHeaderImageView"
+        app:layout_constraintBottom_toBottomOf="@+id/detailsHeaderLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 

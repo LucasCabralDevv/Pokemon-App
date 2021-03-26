@@ -40,6 +40,7 @@ class DetailsPokemonFragment : Fragment() {
     }
 
     private fun setupViews() {
+        Glide.with(requireContext()).load(args.pokemon.img).into(detailsHeaderImageView)
         Glide.with(requireContext()).load(args.pokemon.img).into(detailsImagePokemonImageView)
         detailsNamePokemonTextView.text = args.pokemon.name
         detailsHeightPokemonTextView.text = args.pokemon.height
