@@ -8,9 +8,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import com.example.pokemonmvvmclean.R
+import kotlinx.android.synthetic.main.fragment_details_pokemon.*
 
 class DetailsPokemonFragment : Fragment() {
+
+    val args: DetailsPokemonFragmentArgs by navArgs()
 
     private val navController: NavController by lazy {
         findNavController()
@@ -21,6 +25,13 @@ class DetailsPokemonFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         return inflater.inflate(R.layout.fragment_details_pokemon, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val pokemonName = args.pokemon.name
+        detailsPokemonNameTextView.text = pokemonName
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

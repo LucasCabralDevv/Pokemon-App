@@ -32,8 +32,8 @@ class PokemonFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        viewModel.pokemons.observe(viewLifecycleOwner, Observer {
-            setupRecyclerView(it)
+        viewModel.pokemons.observe(viewLifecycleOwner, Observer { pokemonList ->
+            setupRecyclerView(pokemonList)
         })
 
         viewModel.getPokemons()
@@ -43,8 +43,10 @@ class PokemonFragment : Fragment() {
         with(binding.rvPokemon) {
             setHasFixedSize(true)
             layoutManager = GridLayoutManager(context, 2)
-            adapter = PokemonAdapter(pokemons) {
-            findNavController().navigateWithAnimations(R.id.action_pokemonFragment_to_detailsPokemonFragment)
+            adapter = PokemonAdapter(pokemons) { pokemon ->
+                val directions = PokemonFragmentDirections
+                    .actionPokemonFragmentToDetailsPokemonFragment(pokemon)
+            findNavController().navigateWithAnimations(directions)
             }
         }
     }

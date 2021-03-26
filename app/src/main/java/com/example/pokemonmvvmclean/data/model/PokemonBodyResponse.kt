@@ -19,5 +19,8 @@ fun PokemonBodyResponse.toPokemonModel() = Pokemon(
     id = this.id,
     num = this.num,
     name = this.name,
-    img = this.img
+    img = this.img,
+    height = this.height,
+    weight = this.weight,
+    weaknesses = this.weaknesses
 )

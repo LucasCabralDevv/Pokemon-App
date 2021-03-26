@@ -18,5 +18,11 @@
         android:id="@+id/detailsPokemonFragment"
         android:name="com.example.pokemonmvvmclean.presenter.pokemons.details.DetailsPokemonFragment"
         android:label="@string/pokemon_details_title_action_bar"
-        tools:layout="@layout/fragment_details_pokemon" />
+        tools:layout="@layout/fragment_details_pokemon">
+
+        <argument
+            android:name="pokemon"
+            app:argType="com.example.pokemonmvvmclean.presenter.model.PokemonUiModel"
+            app:nullable="false"/>
+    </fragment>
 </navigation>
