@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        app:constraintSetEnd="@layout/fragment_details_pokemon_motion_scene_end"
+        app:constraintSetStart="@layout/fragment_details_pokemon_motion_scene_start">
+
+        <OnSwipe
+            app:touchAnchorSide="top"
+            app:dragDirection="dragUp" />
+    </Transition>
+</MotionScene>

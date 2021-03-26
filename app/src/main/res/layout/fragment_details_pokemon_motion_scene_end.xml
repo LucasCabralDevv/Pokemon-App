@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:layoutDescription="@xml/fragment_details_pokemon_scene"
     tools:context=".presenter.pokemons.details.DetailsPokemonFragment">
 
     <com.airbnb.lottie.LottieAnimationView
@@ -13,13 +12,14 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:scaleType="center"
+        app:lottie_rawRes="@raw/pokedex"
+        app:lottie_loop="true"
+        app:lottie_autoPlay="true"
         app:layout_constraintBottom_toTopOf="@+id/content_layout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:lottie_autoPlay="true"
-        app:lottie_loop="true"
-        app:lottie_rawRes="@raw/pokedex" />
+        />
 
     <LinearLayout
         android:id="@+id/content_layout"
@@ -50,8 +50,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:maxLines="1"
-                android:textStyle="bold"
                 android:text="Pikachu"
+                android:textStyle="bold"
                 android:textSize="18sp" />
         </LinearLayout>
 
@@ -74,8 +74,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLines="1"
-                android:textStyle="bold"
                 android:text="1.09 m"
+                android:textStyle="bold"
                 android:textSize="18sp" />
 
             <TextView
@@ -151,8 +151,8 @@
             android:text="Use your Pokeball"
             android:textColor="@android:color/holo_red_dark"
             android:textSize="18sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"/>
     </LinearLayout>
 
 
-</androidx.constraintlayout.motion.widget.MotionLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
