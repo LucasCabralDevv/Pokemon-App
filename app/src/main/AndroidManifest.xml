@@ -8,13 +8,14 @@
     <application
         android:name=".presenter.PokemonApp"
         android:allowBackup="true"
-        android:usesCleartextTraffic="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.PokemonMVVMClean">
-        <activity android:name=".presenter.MainActivity">
+        android:theme="@style/Theme.PokemonMVVMClean"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".presenter.MainActivity" />
+        <activity android:name=".presenter.splash.SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
