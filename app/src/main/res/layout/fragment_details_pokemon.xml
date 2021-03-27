@@ -12,6 +12,7 @@
         android:id="@+id/detailsHeaderLayout"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:background="@drawable/grass2"
         app:layout_constraintBottom_toTopOf="@+id/detailsContentLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -19,8 +20,9 @@
 
         <ImageView
             android:id="@+id/detailsHeaderImageView"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
+            android:layout_width="220dp"
+            android:layout_height="220dp"
+            android:contentDescription="@string/image_pokemon_on_grass_content"
             android:scaleType="centerInside"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -49,7 +51,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Pokémon: "
+                android:text="@string/details_pokemon_name"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 
@@ -58,9 +60,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:maxLines="1"
-                android:text="Pikachu"
                 android:textSize="18sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                tools:text="Pikachu" />
         </LinearLayout>
 
         <LinearLayout
@@ -73,7 +75,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="HEIGHT: "
+                android:text="@string/details_pokemon_height"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 
@@ -82,16 +84,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLines="1"
-                android:text="1.09 m"
                 android:textSize="18sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                tools:text="1.09 m" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="12dp"
                 android:layout_marginLeft="12dp"
-                android:text="WEIGHT: "
+                android:text="@string/details_pokemon_weight"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 
@@ -99,9 +101,9 @@
                 android:id="@+id/detailsWeightPokemonTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="19.0 kg"
                 android:textSize="18sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                tools:text="19.0 kg" />
         </LinearLayout>
 
         <LinearLayout
@@ -113,7 +115,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="WEAKNESSES: "
+                android:text="@string/details_pokemon_weaknesses"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 
@@ -121,9 +123,9 @@
                 android:id="@+id/detailsWeaknessesPokemonTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Fire"
                 android:textSize="18sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                tools:text="Fire" />
         </LinearLayout>
 
         <ImageView
@@ -131,6 +133,7 @@
             android:layout_width="320dp"
             android:layout_height="400dp"
             android:layout_gravity="center"
+            android:contentDescription="@string/image_pokemon_pokedex_content"
             android:scaleType="fitCenter"
             tools:src="@tools:sample/avatars" />
 
@@ -150,14 +153,15 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
+            android:contentDescription="@string/pokeball_image_content"
             android:src="@drawable/pokebola" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Use your Pokeball"
-            android:textColor="@android:color/holo_red_dark"
+            android:text="@string/details_use_your_pokeball"
+            android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold" />
     </LinearLayout>

@@ -9,5 +9,13 @@
     <string name="pokemon_details_title_action_bar">Pokedex</string>
     <string name="pokemon_details_title">Pokemon Details</string>
     <string name="details_capture_text">Try to capture your %1$s</string>
+    <string name="details_pokemon_name">Pokémon:</string>
+    <string name="details_pokemon_height">HEIGHT:</string>
+    <string name="details_pokemon_weight">WEIGHT:</string>
+    <string name="details_pokemon_weaknesses">WEAKNESSES:</string>
+    <string name="details_use_your_pokeball">Use your Pokeball</string>
+    <string name="pokeball_image_content">Pokeball Image</string>
+    <string name="image_pokemon_pokedex_content">Image Pokemon Pokedex</string>
+    <string name="image_pokemon_on_grass_content">Image pokemon on grass</string>
 
 </resources>
