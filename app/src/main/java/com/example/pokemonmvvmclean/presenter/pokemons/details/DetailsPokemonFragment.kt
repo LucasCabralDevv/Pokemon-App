@@ -11,11 +11,12 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
 import com.example.pokemonmvvmclean.R
-import kotlinx.android.synthetic.main.fragment_details_pokemon.*
+import com.example.pokemonmvvmclean.databinding.FragmentDetailsPokemonBinding
 
 class DetailsPokemonFragment : Fragment() {
 
     val args: DetailsPokemonFragmentArgs by navArgs()
+    private lateinit var detailsBinding: FragmentDetailsPokemonBinding
 
     private val navController: NavController by lazy {
         findNavController()
@@ -24,8 +25,9 @@ class DetailsPokemonFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_details_pokemon, container, false)
+    ): View {
+        detailsBinding = FragmentDetailsPokemonBinding.inflate(inflater, container, false)
+        return detailsBinding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -40,11 +42,14 @@ class DetailsPokemonFragment : Fragment() {
     }
 
     private fun setupViews() {
-        Glide.with(requireContext()).load(args.pokemon.img).into(detailsHeaderImageView)
-        Glide.with(requireContext()).load(args.pokemon.img).into(detailsImagePokemonImageView)
-        detailsNamePokemonTextView.text = args.pokemon.name
-        detailsHeightPokemonTextView.text = args.pokemon.height
-        detailsWeightPokemonTextView.text = args.pokemon.weight
-        detailsWeaknessesPokemonTextView.text = args.pokemon.weaknesses.toString()
+        with(detailsBinding){
+            Glide.with(requireContext()).load(args.pokemon.img).into(detailsHeaderImageView)
+            Glide.with(requireContext()).load(args.pokemon.img).into(detailsImagePokemonImageView)
+
+            detailsNamePokemonTextView.text = args.pokemon.name
+            detailsHeightPokemonTextView.text = args.pokemon.height
+            detailsWeightPokemonTextView.text = args.pokemon.weight
+            detailsWeaknessesPokemonTextView.text = args.pokemon.weaknesses.toString()
+        }
     }
 }

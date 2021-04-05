@@ -154,7 +154,7 @@
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:contentDescription="@string/pokeball_image_content"
-            android:src="@drawable/pokebola" />
+            android:src="@drawable/pokebola2" />
 
         <TextView
             android:layout_width="wrap_content"
