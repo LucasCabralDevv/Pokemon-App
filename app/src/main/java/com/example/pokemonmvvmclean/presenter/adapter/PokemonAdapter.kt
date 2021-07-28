@@ -1,14 +1,9 @@
 package com.example.pokemonmvvmclean.presenter.adapter
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
-import com.bumptech.glide.Glide
-import com.example.pokemonmvvmclean.R
 import com.example.pokemonmvvmclean.databinding.ItemPokemonBinding
 import com.example.pokemonmvvmclean.presenter.model.PokemonUiModel
 
