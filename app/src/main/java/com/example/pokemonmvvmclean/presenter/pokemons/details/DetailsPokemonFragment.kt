@@ -49,7 +49,9 @@ class DetailsPokemonFragment : Fragment() {
             detailsNamePokemonTextView.text = args.pokemon.name
             detailsHeightPokemonTextView.text = args.pokemon.height
             detailsWeightPokemonTextView.text = args.pokemon.weight
-            detailsWeaknessesPokemonTextView.text = args.pokemon.weaknesses.toString()
+            for (weakness in args.pokemon.weaknesses) {
+                detailsWeaknessesPokemonTextView.append("$weakness ")
+            }
         }
     }
 }
